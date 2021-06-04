@@ -15,11 +15,15 @@ We will use the  `openvibe-convert.cmd` (does not require the GUI).
 - move to the directory containing your data
 
 - find and specify the openvibe installation folder:
+
   `SET "PATH_OV=C:\Program Files\openvibe-3.1.0-64bit"`
+
 - Test whether the path is recognized:
+
   `IF EXIST "%PATH_OV%\openvibe-convert.cmd" (ECHO converted found) ELSE (ECHO INCORRECT PATH)`
 
 - execute the following function to convert all .ov in the data folder to .edf:
+
    `for /F %i in ('dir /b *.ov') do ("%PATH_OV%/openvibe-convert.cmd" %~ni.ov %~ni.gdf )`
 
 # Translating stimuli
