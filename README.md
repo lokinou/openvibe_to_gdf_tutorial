@@ -3,7 +3,7 @@ It might seems obvious for some, but for clueless users I believe this tutorial 
 
 # What does it do?
 
-Put your `data*.ov` files in a folder and this scripts convert them in `data*.edf`
+Put your `data*.ov` files in a folder and this scripts convert them in `data*.gdf`
 
 ## Convert OpenVibe .ov files into gdf files
 
