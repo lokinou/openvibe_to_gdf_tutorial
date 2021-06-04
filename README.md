@@ -12,26 +12,15 @@ You need to donwload [OpenViBE](http://openvibe.inria.fr/downloads/)
 We will use the  `openvibe-convert.cmd` (does not require the GUI).
 
 - Open a windows command shell (not a powershell)
-- Copy the path where you stored your data (here called my_data and placed on the desktop), and test whether the path is recognized
+- move to the directory containing your data
 
-```cmd
-SET "WORKDIR=%USERPROFILE%\Desktop\my_data"
-if exist "%WORKDIR%\NUL" (echo directory found) else (echo INCORRECT PATH)
-```
+- find and specify the openvibe installation folder:
+  `SET "PATH_OV=C:\Program Files\openvibe-3.1.0-64bit"`
+- Test whether the path is recognized:
+  `IF EXIST "%PATH_OV%\openvibe-convert.cmd" (ECHO converted found) ELSE (ECHO INCORRECT PATH)`
 
-- find the openvibe installation folder and test whether the path is recognized
-
-```cmd
-SET "PATH_OV=C:\Program Files\openvibe-3.1.0-64bit" 
-if exist "%PATH_OV%\openvibe-convert.cmd" (echo converted found) else (echo INCORRECT PATH)
-```
-
-- execute the following function to convert all .ov in the data folder to .edf
-
-```cmd
-cd %WORKDIR%
-for /F %i in ('dir /b *.ov') do ("%PATH_OV%/openvibe-convert.cmd" %~ni.ov %~ni.gdf )
-```
+- execute the following function to convert all .ov in the data folder to .edf:
+   `for /F %i in ('dir /b *.ov') do ("%PATH_OV%/openvibe-convert.cmd" %~ni.ov %~ni.gdf )`
 
 # Translating stimuli
 
