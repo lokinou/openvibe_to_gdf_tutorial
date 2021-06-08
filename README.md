@@ -11,7 +11,7 @@ You need to donwload [OpenViBE](http://openvibe.inria.fr/downloads/)
 
 We will use the  `openvibe-convert.cmd` (does not require the GUI).
 
-- Open a windows command shell (not a powershell) and reach the folder containing the data you want to convert (for example in a data directoty on the desktop)
+- Open a windows command shell (not a powershell) and reach the folder containing the data you want to convert (for example in a data directory on the desktop)
 
   `cd %USERPROFILE%\Desktop\data`
   
