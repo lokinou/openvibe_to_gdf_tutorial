@@ -1,4 +1,4 @@
-The purpose of this tutorial is to show how to **convert your OpenViBE data files into universally available .edf files**.
+The purpose of this tutorial is to show how to **convert your OpenViBE data files into universally available .gdf files**.
 It might seems obvious for some, but for clueless users I believe this tutorial might help a bit.
 
 # What does it do?
@@ -11,9 +11,10 @@ You need to donwload [OpenViBE](http://openvibe.inria.fr/downloads/)
 
 We will use the  `openvibe-convert.cmd` (does not require the GUI).
 
-- Open a windows command shell (not a powershell)
-- move to the directory containing your data
+- Open a windows command shell (not a powershell) and reach the folder containing the data you want to convert (for example in a data directoty on the desktop)
 
+  `cd %USERPROFILE%\Desktop\data`
+  
 - find and specify the openvibe installation folder:
 
   `SET "PATH_OV=C:\Program Files\openvibe-3.1.0-64bit"`
@@ -25,6 +26,9 @@ We will use the  `openvibe-convert.cmd` (does not require the GUI).
 - execute the following function to convert all .ov in the data folder to .edf:
 
    `for /F %i in ('dir /b *.ov') do ("%PATH_OV%/openvibe-convert.cmd" %~ni.ov %~ni.gdf )`
+   
+Ignore the contrib-pybox.dll warning message.
+Your data is now converted to gdf !
 
 # Translating stimuli
 
