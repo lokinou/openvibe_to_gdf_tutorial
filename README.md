@@ -25,6 +25,10 @@ We will use the  `openvibe-convert.cmd` (does not require the GUI).
 
 - execute the following function to convert all .ov in the data folder to .edf:
 
+   `for /F %i in ('dir /b *.ov') do ("%PATH_OV%/openvibe-convert.cmd" %~ni.ov %~ni.edf )`
+   
+- execute the following function to convert all .ov in the data folder to .gdf (note: mne gdf read seems to fail when reading the event table):
+
    `for /F %i in ('dir /b *.ov') do ("%PATH_OV%/openvibe-convert.cmd" %~ni.ov %~ni.gdf )`
    
 Ignore the contrib-pybox.dll warning message.
