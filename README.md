@@ -35,7 +35,7 @@ Ignore the contrib-pybox.dll warning message.
 Your data is now converted to gdf !
 
 # Disclaimer
-I noticed an issue when loading the .gdf files into python MNE. In the annotations, the column containing the stimuli labels `desc` is shifted, **meaning ALL your stimuli positions are shifted !!!**. Waiting for a better solution I therefore shift the list of annotations backwards using this function ´raw.annotations.description = np.roll(raw.annotations.description, -1)´. The last stimulation is (and was anyways) lost in the process.
+I noticed an issue when loading the .gdf files into python MNE. In the annotations, the column containing the stimuli labels `desc` is shifted, **meaning ALL your stimuli positions are shifted !!!**. Waiting for a better solution I therefore shift the list of annotations backwards using this function `raw.annotations.description = np.roll(raw.annotations.description, -1)`. The last stimulation is (and was anyways) lost in the process.
 
 # Translating stimuli
 
